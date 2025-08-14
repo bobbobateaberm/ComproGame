@@ -8,7 +8,7 @@ let quest = "";
 let boolans = "";
 let ans = "";
 
-let charalist = ["Pharuj Assembler","Kendo Deedo","Piya Mogger"]
+let charalist = ["Kendo Deedo"] //["Pharuj Assembler","Kendo Deedo","Piya Mogger"] ["Kendo Deedo"]
 const randomIndex1 = Math.floor(Math.random() * charalist.length);
 player2 = charalist[randomIndex1];
 
