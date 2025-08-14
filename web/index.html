@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NIgga Game</title>
+  <link rel="stylesheet" href="./styles.css">
+
+ 
+
+</head>
+<body>
+
+<div id = "itemcharabox" class="itembox">
+
+  <h1>Choose your character</h1>
+
+  <div id = "charabox1" class="charabox">
+  <button id="chara1" onclick="charaselfunc1()" class="chb" ><img class="charasel" src="./pics/img.jpg"></button>
+  <div class="skill" id="chara1skill">
+    <ul>
+      <b  style="font-size: 50px;" >Kendo DeeDo</b>
+      <li>Speed: ★★★★☆</li>
+      <li>Strength: ★★★☆☆</li>
+      <li>Defense: ★★★★☆</li>
+    </ul>
+
+   </div>
+  </div>
+
+<div id = "charabox2" class="charabox">
+  <button id="chara2" onclick="charaselfunc2()" class="chb">
+    <img class="charasel" src="./pics/pharujassem.jpg" alt="Pharuj Assembler">
+  </button>
+  <div class="skill" id="chara2skill">
+    <ul>
+      <b  style="font-size: 50px;" >Pharuj Assembler</b>
+      <li>Speed: ★★★★☆</li>
+      <li>Strength: ★★★☆☆</li>
+      <li>Defense: ★★★★☆</li>
+    </ul>
+  </div>
+</div>
+
+  <div id = "charabox3" class="charabox">
+  <button id="chara3" onclick="charaselfunc3()" class="chb" ><img class="charasel" src="./pics/piyamog.png"></button>
+   <div class="skill" id="chara3skill">
+    <ul>
+      <b  style="font-size: 50px;" >Piya Mogger</b>
+      <li>Speed: ★★★★☆</li>
+      <li>Strength: ★★★☆☆</li>
+      <li>Defense: ★★★★☆</li>
+    </ul>
+   </div>
+  </div>
+
+  <div id = "charabox4" class="charabox">
+  <button id="chara4" onclick="charaselfunc4()" class="chb" ><img class="charasel" src="./pics/thanablock.png"></button>
+   <div class="skill" id="chara4skill">
+    <ul>
+      <b  style="font-size: 50px;" >Thana Block</b>
+      <li>Speed: ★★★★☆</li>
+      <li>Strength: ★★★☆☆</li>
+      <li>Defense: ★★★★☆</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<div class="battlebox" id="battle" style="display: none;">
+  <h1 id = "battleh1">You are battling</h1>
+  <button style="display: none;" id="player1" class="chb" ><img class="charasel" src="./pics/img.jpg"></button>
+  <button style="display: none;" id="player2" class="chb" ><img class="charasel" src="./pics/pharujassem.jpg"></button>
+  <button style="display: none;" id="player3" class="chb" ><img class="charasel" src="./pics/piyamog.png"></button>
+  <button style="display: none;" id="player4" class="chb" ><img class="charasel" src="./pics/thanablock.png"></button>
+
+
+</div>
+
+<button style="display: none;" id = "submit" onclick="clickfunc()">Confirm</button>
+<button style="display: none;" id = "submitbat" onclick="clickbatfunc()">Start battle</button>
+
+
+<div style="border: 5px solid rgb(47, 248, 7);display: none;" class="battleboxplayer" id="playerbox" >
+  <h1>You</h1>
+  <button style="display: none;" id="chara11" class="chb" ><img class="charasel" src="./pics/img.jpg"></button>
+  <button style="display: none;" id="chara22" class="chb" ><img class="charasel" src="./pics/pharujassem.jpg"></button>
+  <button style="display: none;" id="chara33" class="chb" ><img class="charasel" src="./pics/piyamog.png"></button>
+  <button style="display: none;" id="chara44" class="chb" ><img class="charasel" src="./pics/thanablock.png"></button>
+
+
+</div>
+
+<div style="display: none;" id = "questbox">
+<!--questken-->
+ <div style="display: none;" id = "questboxken1"> <!--questken1-->
+  <label >1+2 = ?</label><br>
+  <input type="text" id="ansken1" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+ </div> 
+
+<div style="display: none;" id = "questboxken2"> <!--questken2-->
+  <label >Is watching PAY GORN gay? yes or no = ?</label><br>
+  <input type="text" id="ansken2" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxken3"> <!--questken3-->
+  <label >What is PEP8?</label><br>
+  <label >A.) A style of coding java readable </label><br>
+  <label >B.) A style of coding python readable</label><br>
+  <input type="text" id="ansken3" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxken4"> <!--questken4-->
+  <label >What is Agile programming?</label><br>
+  <label >A.) Steps to develop a software </label><br>
+  <label >B.) Ways to develop software with others as easy as possible</label><br>
+  <input type="text" id="ansken4" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxken5"> <!--questken5-->
+  <label >What is OOP stand for?</label><br>
+  <label >A.) Object Obama Penis </label><br>
+  <label >B.) Object Oriented Programming</label><br>
+  <input type="text" id="ansken5" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+<!--questken-->
+
+
+<!--questpharuj-->
+ <div style="display: none;" id = "questboxpha1"> <!--questpha1-->
+  <label >What is Assembly Language?</label><br>
+  <label >A.) Low-level programming language that maintains a direct correspondence with a computer's machine code instructions. </label><br>
+  <label >B.) A High-Level general-purpose programming language that has been widely used for over 50 years.</label><br>
+  <input type="text" id="anspha1" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+ </div> 
+
+<div style="display: none;" id = "questboxpha2"> <!--questpha2-->
+  <label >what is the output of this function</label><br>
+  <label >def mydiddy(dihsize):</label><br>
+  <label >   result = dihsize</label><br>
+  <label >   print(result)</label><br>
+  <label >   </label><br>
+  <label >mydiddy(56)</label><br>
+  <input type="number" id="anspha2" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxpha3"> <!--questpha3-->
+<label >What is Github?</label><br>
+  <label >A.) A software-based computer that emulates a physical computer, running its own operating system and applications, while sharing the resources of a physical host machine</label><br>
+  <label >B.) A web-based platform that provides version control and collaboration for software development using Git.</label><br>
+  <label >C.) A helper module for common widgets that may be required in developing applications with Pygame. </label><br>
+  <input type="text" id="anspha3" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxpha4"> <!--questpha4-->
+  <label >what is the duty of this command</label><br>
+  <label >git commit -m "message"</label><br>
+  <label >A.) To note a change on project with message </label><br>
+  <label >B.) To push projects to production</label><br>
+  <label >C.) See a change history</label><br>
+  <input type="text" id="anspha4" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxpha5"> <!--questpha5-->
+  <label >What is public class?</label><br>
+  <label >A.) A function that can access from any program </label><br>
+  <label >B.) A declaration of class that is accessible to all program</label><br>
+  <input type="text" id="anspha5" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+<!--questpharuj-->
+
+<!--questpiya-->
+ <div style="display: none;" id = "questboxpiya1"> <!--questpiya1-->
+  <label >What is Try block do in python</label><br>
+  <label >A.) To let you try your code whether it is correct or not</label><br>
+  <label >B.) A block of function that holds error </label><br>
+  <input type="text" id="anspiya1" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+ </div> 
+
+<div style="display: none;" id = "questboxpiya2"> <!--questpiya2-->
+  <label >what is the use of __init__ ?</label><br>
+  <label >A.) To assign values to object properties, or other operations that are necessary to do when the object is being created</label><br>
+  <label >B.) To call the window commands on initial.</label><br>
+  <input type="text" id="anspiya2" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxpiya3"> <!--questpiya3-->
+<label >What is the output?</label><br>
+<label >class Person:</label><br>  
+<label >def __init__(self, name, age):</label><br>
+<label >self.name = name</label><br>    
+<label >self.age = age</label><br> 
+<label >p1 = Person("John", 36)</label><br>
+<label >print(p1.name)</label><br>
+<label >print(p1.age)</label><br>
+ <input type="text" id="anspiya3" value="">
+ <input type="number" id="anspiya3-1" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxpiya4"> <!--questpiya4-->
+<label >class MyClass:</label><br>  
+<label >x = 5</label><br>
+<label >p1 = MyClass()</label><br>    
+<label >print(p1.x)</label><br> 
+<label >what is this code do?</label><br>
+<label >A.) Get value from Myclass class</label><br>
+<label >B.) Print out math module p1.x</label><br>
+  <input type="text" id="anspiya4" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+
+<div style="display: none;" id = "questboxpiya5"> <!--questpiya5-->
+  <label >What is __str__ do in OOP</label><br>
+  <label >A.) To convert all value to string </label><br>
+  <label >B.) To represent all string values</label><br>
+  <input type="text" id="anspiya5" value="">
+  <button type="button" id = "submitans" onclick="clickansfunc()">Submit Answer</button>
+</div> 
+<!--questpiya-->
+</div>
+
+
+
+
+<script src="./script.js"></script>
+
+
+
+</body>
+</html> 
+ 
+ 

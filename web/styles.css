@@ -1,0 +1,191 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  color: #333;
+  text-align: center;
+}
+
+/* Item box for character selection */
+.itembox {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-width: fit-content;
+}
+
+/* Character box */
+.charabox {
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top;
+  transition: transform 0.3s ease;
+}
+
+.charabox:hover {
+  transform: translateY(-10px);
+}
+
+/* Character image */
+.charasel {
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.chb{
+  border-radius: 20%;
+  border: none;
+  background-color: none;
+}
+
+.chb:hover .charasel {
+  width: 280px;
+  height: 280px;
+  cursor: pointer;
+}
+
+/* Skill box */
+.skill {
+  display: none;
+  margin-top: 15px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 15px 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+.skill b {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* List inside skill */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Battlebox styling */
+.battlebox {
+  display: none;
+  background: radial-gradient(circle, #ff512f, #dd2476); /* fiery gradient */
+  padding: 20px 40px;
+  margin: 40px auto;
+  border-radius: 25px;
+  box-shadow: 0 0 30px 10px rgba(255, 69, 0, 0.7), 0 0 60px 20px rgba(255, 140, 0, 0.5);
+  text-align: center;
+  max-width: fit-content; /* shrink to fit content */
+  animation: fireGlow 1s infinite alternate;
+  margin: 50px;
+}
+.battleboxplayer {
+  display: none;
+  background: radial-gradient(circle, #caff0b, #ffffff); /* fiery gradient */
+  padding: 20px 40px;
+  margin: 40px auto;
+  border-radius: 25px;
+  text-align: center;
+  max-width: fit-content; /* shrink to fit content */
+  margin: 50px;
+}
+/* Center character buttons inside battlebox */
+.battlebox .chb {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Fire glow animation */
+@keyframes fireGlow {
+  0% {
+    box-shadow: 0 0 20px 5px rgba(255, 69, 0, 0.5), 0 0 40px 10px rgba(255, 140, 0, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 30px 10px rgba(255, 69, 0, 0.7), 0 0 60px 20px rgba(255, 140, 0, 0.6);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 20px 5px rgba(255, 69, 0, 0.5), 0 0 40px 10px rgba(255, 140, 0, 0.4);
+    transform: scale(1);
+  }
+}
+
+/* Optional: fiery header inside battlebox */
+.battlebox h1 {
+  color: #fffacd;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff4500, 0 0 20px #ff6347;
+  margin-bottom: 20px;
+}
+
+/* Buttons for actions */
+#submit, #submitbat {
+  display: none;
+  margin-top: 20px;
+  padding: 15px 40px;
+  font-size: 22px;
+  border: none;
+  border-radius: 15px;
+  background: #ff7f50;
+  color: white;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+#submit:hover, #submitbat:hover {
+  background: #ff6333;
+  transform: scale(1.05);
+}
+
+/* Question boxes */
+#questbox {
+  margin: 40px auto;
+  max-width: 700px;
+  background: rgba(255,255,255,0.9);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+#questbox label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#questbox input[type="text"],
+#questbox input[type="number"] {
+  padding: 10px;
+  font-size: 18px;
+  width: 80%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Animations */
+@keyframes charasel {
+  0% { transform: scale(1.02); }
+  50% { transform: scale(0.98); }
+  100% { transform: scale(1.02); }
+}
+
+.charasel {
+  animation: charasel 0.8s infinite alternate;
+}
