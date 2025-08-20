@@ -8,7 +8,7 @@ let quest = "";
 let boolans = "";
 let ans = "";
 
-let charalist = ["Kendo Deedo"] //["Pharuj Assembler","Kendo Deedo","Piya Mogger"] ["Kendo Deedo"]
+let charalist = ["Pharuj Assembler","Kendo Deedo","Piya Mogger"] //["Pharuj Assembler","Kendo Deedo","Piya Mogger"] ["Kendo Deedo"]
 const randomIndex1 = Math.floor(Math.random() * charalist.length);
 player2 = charalist[randomIndex1];
 
@@ -141,7 +141,7 @@ function clickbatfunc(){
     document.getElementById("submitbat");
     document.getElementById("playerbox").style.display = "inline-block";
      document.getElementById("battleh1").innerHTML = "Opponent";
-    console.log(character)
+    console.log("player :",character)
 
     if (character === "Thana Block"){
      document.getElementById("chara44").style.display = "block";
@@ -172,7 +172,6 @@ function clickbatfunc(){
      else if (character === "Kendo Deedo"){
      document.getElementById("chara11").style.display = "block";
      document.getElementById("itemcharabox").style.display = "none";
-  
      console.log('succesfully imported', character)
      document.getElementById("submitbat").style.display = "none";
      document.getElementById("questbox").style.display = "block";
@@ -277,20 +276,21 @@ else if(questthana === "5"){
 
 
 function clickansfunc(){
-document.getElementById("submitans");
-if(player2 === "Kendo DeeDo"){
-  questkendocheck();
+
+
+if(player2 === "Kendo Deedo"){
+  questkendocheck()
   setTimeout(function() {
     location.reload();
 }, 3000); 
 }
-if(player2 === "Pharuj Assembler"){
+else if(player2 === "Pharuj Assembler"){
   questpharujcheck()
   setTimeout(function() {
     location.reload();
 }, 3000); 
 }
-if(player2 === "Piya Mogger"){
+else if(player2 === "Piya Mogger"){
   questpiyacheck()
   setTimeout(function() {
     location.reload();
@@ -317,14 +317,14 @@ function questkendocheck(){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
-    
+console.log(boolans)    
 console.log(ans)
 
 
@@ -334,7 +334,7 @@ if(questkendo === "2"){
 
    ans = document.getElementById("ansken2").value;
 
- if(ans === "yes"){
+ if(ans !== "no"){
    boolans = false ;
 }
  else if(ans === "no"){
@@ -342,11 +342,11 @@ if(questkendo === "2"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
     
@@ -367,11 +367,11 @@ if(questkendo === "3"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -392,11 +392,11 @@ if(questkendo === "4"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost();
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -407,7 +407,7 @@ console.log(ans)
 }
 if(questkendo === "5"){
 
-   ans = document.getElementById("ansken4").value;
+   ans = document.getElementById("ansken5").value;
 
  if(ans !== "B"){
    boolans = false ;
@@ -417,18 +417,16 @@ if(questkendo === "5"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
 console.log(boolans)
 console.log(ans)
-
-
 }
 
 }
@@ -445,11 +443,11 @@ function questpharujcheck(){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
     
@@ -470,11 +468,11 @@ if(questpharuj === "2"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
     
@@ -495,11 +493,11 @@ if(questpharuj === "3"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -521,11 +519,11 @@ if(questpharuj === "4"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -547,11 +545,11 @@ if(questpharuj === "5"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -575,11 +573,11 @@ function questpiyacheck(){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
     
@@ -600,11 +598,11 @@ if(questpiya === "2"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
     
@@ -625,11 +623,11 @@ if(questpiya === "3"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -650,11 +648,11 @@ if(questpiya === "3"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -675,11 +673,11 @@ if(questpiya === "4"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -701,11 +699,11 @@ if(questpiya === "5"){
  }
 
     if(boolans === false){
-       document.write("you lost")
+       showlost()
        console.log(ans)
     }
     else if (boolans === true){
-      document.write("you win")
+      showwin()
       console.log(ans)
     }
         
@@ -715,4 +713,21 @@ console.log(ans)
 
 }
 
+}
+function showwin(){
+   document.getElementById("questbox").style.display="none";
+   document.getElementById("battle").style.display="none";
+   document.getElementById("playerbox").style.display="none";
+   document.body.style.background="black";
+   document.getElementById("win").style.display="block";
+    document.getElementById("win").style.animation="lost 4s";
+   
+}
+function showlost(){
+   document.getElementById("questbox").style.display="none";
+    document.getElementById("battle").style.display="none";
+   document.getElementById("playerbox").style.display="none";
+   document.body.style.background="white";
+   document.getElementById("lost").style.display="block";
+   document.getElementById("lost").style.animation="lost 4s";
 }

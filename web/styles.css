@@ -1,17 +1,21 @@
-/* General body styling */
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
 body {
-  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #74ebd5, #acb6e5);
-  color: #333;
   text-align: center;
+  padding: 50px;
+  background-image: url('./pics/background.gif')  ;
+  background-size:cover;
 }
 
 /* Item box for character selection */
 .itembox {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   padding: 30px;
-  margin: 40px auto;
+  margin: auto;
   border-radius: 25px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   max-width: fit-content;
@@ -145,6 +149,9 @@ li {
   color: white;
   transition: background 0.3s ease, transform 0.2s ease;
   cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:500px;
 }
 
 #submit:hover, #submitbat:hover {
@@ -188,4 +195,30 @@ li {
 
 .charasel {
   animation: charasel 0.8s infinite alternate;
+}
+
+.lost{
+  width: 50%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  animation-duration: 5s;
+}
+.win{
+  width: 50%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  animation-duration: 5s;
+}
+
+/* Animations */
+@keyframes lost {
+  0% { opacity: 0; }
+  100% { opacity: 100; }
+}
+/* Animations */
+@keyframes win {
+  0% { opacity: 0; }
+  100% { opacity: 100; }
 }
