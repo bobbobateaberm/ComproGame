@@ -8,7 +8,7 @@ let quest = "";
 let boolans = "";
 let ans = "";
 
-let charalist = ["Pharuj Assembler","Kendo Deedo","Piya Mogger"] //["Pharuj Assembler","Kendo Deedo","Piya Mogger"] ["Kendo Deedo"]
+let charalist = ["Pharuj Assembler","Kendo Deedo","Piya Mogger","Thana Block"] //["Pharuj Assembler","Kendo Deedo","Piya Mogger"] ["Kendo Deedo"]
 const randomIndex1 = Math.floor(Math.random() * charalist.length);
 player2 = charalist[randomIndex1];
 
@@ -296,7 +296,13 @@ else if(player2 === "Piya Mogger"){
     location.reload();
 }, 3000); 
 }
+else if(player2 === "Thana Block"){
+  questthanacheck()
+  setTimeout(function() {
+    location.reload();
 
+}, 3000); 
+}
 }
 
 
@@ -694,6 +700,136 @@ if(questpiya === "5"){
    boolans = false ;
 }
  else if(ans === "B"){
+    boolans = true;
+
+ }
+
+    if(boolans === false){
+       showlost()
+       console.log(ans)
+    }
+    else if (boolans === true){
+      showwin()
+      console.log(ans)
+    }
+        
+console.log(boolans)
+console.log(ans)
+
+
+}
+
+}
+function questthanacheck(){
+    if(questthana === "1"){
+
+   ans = document.getElementById("ansthana1").value;
+
+ if(ans !== "A"){
+   boolans = false ;
+}
+ else if(ans === "A"){
+    boolans = true;
+ }
+
+    if(boolans === false){
+       showlost()
+       console.log(ans)
+    }
+    else if (boolans === true){
+      showwin()
+      console.log(ans)
+    }
+    
+console.log(ans)
+
+
+}
+
+if(questthana === "2"){
+
+   ans = document.getElementById("ansthana2").value;
+
+ if(ans !== "75%"){
+   boolans = false ;
+}
+ else if(ans === "75%"){
+    boolans = true;
+ }
+
+    if(boolans === false){
+       showlost()
+       console.log(ans)
+    }
+    else if (boolans === true){
+      showwin()
+      console.log(ans)
+    }
+    
+console.log(boolans)
+console.log(ans)
+
+
+}
+if(questthana === "3"){
+
+   ans = document.getElementById("ansthana3").value;
+
+ if(ans !== "B"){
+   boolans = false ;
+}
+ else if(ans === "B"){
+    boolans = true;
+ }
+
+    if(boolans === false){
+       showlost()
+       console.log(ans)
+    }
+    else if (boolans === true){
+      showwin()
+      console.log(ans)
+    }
+        
+console.log(boolans)
+console.log(ans)
+
+
+}
+
+if(questthana === "4"){
+
+   ans = document.getElementById("ansthana4").value;
+
+ if(ans !== "1/729"){
+   boolans = false ;
+}
+ else if(ans === "1/729"){
+    boolans = true;
+ }
+
+    if(boolans === false){
+       showlost()
+       console.log(ans)
+    }
+    else if (boolans === true){
+      showwin()
+      console.log(ans)
+    }
+        
+console.log(boolans)
+console.log(ans)
+
+
+}
+if(questthana === "5"){
+
+   ans = document.getElementById("ansthana5").value;
+
+ if(ans !== "729"){
+   boolans = false ;
+}
+ else if(ans === "729"){
     boolans = true;
 
  }
