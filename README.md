@@ -1,4 +1,4 @@
-# 🎮 Compro Game
+# 🎮 Compro Game ( August 2025 )
 
 A browser-based character selection and quiz battle game built with **HTML**, **CSS**, and **JavaScript**.
 
